@@ -1,0 +1,19 @@
+
+-------------------------------------------------------------------------------
+Build Report
+Uncompressed usage by category (Percentages based on user generated assets only):
+Textures               0.0 kb	 0.0% 
+Meshes                 0.0 kb	 0.0% 
+Animations             0.0 kb	 0.0% 
+Sounds                 0.0 kb	 0.0% 
+Shaders                98.0 kb	 27.2% 
+Other Assets           1.9 kb	 0.5% 
+Levels                 0.0 kb	 0.0% 
+Scripts                208.0 kb	 57.7% 
+Included DLLs          0.0 kb	 0.0% 
+File headers           52.4 kb	 14.6% 
+Total User Assets      360.3 kb	 100.0% 
+Complete build size    6.9 mb
+Used Assets and files from the Resources folder, sorted by uncompressed size:
+ 99.6 kb	 1.4% Resources/unity_builtin_extra
+ 

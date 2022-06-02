@@ -1,0 +1,227 @@
+1980 03
+The Early Times
+North Africa in the 90’s was pretty good but not stellar.  
+
+1990 01
+Discovering Electricity
+I was reaching the limits of what was possible to create 
+
+1991 01
+Playing With Motors
+My parents had a subscription to -sciences et vie- a  
+
+1992 01
+Electronics And Circuits
+My dad was very well connected back then. He personally  
+
+1994 01
+Programming In Basic
+Introduced to GW basic at a local -informatic center-. One  
+
+1994 06
+Early Drawing Years
+Drawing had been my main passion, pass time, and escape eve 
+
+1995 05
+Lost School Year
+The Berbers were the lands natives. After centuries of colonization 
+
+1996 03
+The Big Move
+The political situation in Algeria had been rather unstable since 92,  
+
+1997  01
+Programming Again
+My math level was high enough to get into advanced placement math  
+
+1998 01
+Modelling In 3D
+I don’t remember how I got introduced to OpenFx. It was certainly  
+
+2000 01
+Urban Graffiti Scene
+This section will be under heavy encryption Parental freedom rebellious  
+
+2002 01
+Programming In CPP
+First University Undergrad Electrical engineering. I took three classes  
+
+2003 01
+Industrial Design
+Looking into college brochures, I found “industrial design” and thought: here’s  
+
+2004 01
+Snowboarding
+First Experience , to be complete
+ 
+2005 01
+Design Coop
+Wentworth Institute of Technology offers a coop program. I interned at a locale 
+
+2006 01
+Cow Parade
+The cow parade is an international public Art Exhibit that has featured in  
+
+2007 01
+Cross Country Tour
+After graduation, my buddy Sam and I took a 6 week break to take a road  
+
+2008 01
+Temping
+I registered with a temp agency, and was doing a few clerical jobs. 
+
+2009 01
+A Taste Of Business school
+I decided to pursue and MBA … what was I thinking. At the time it  
+
+2010 01
+Making A Mobile Game
+Sam (my road trip buddy) and Chris and Mike, were starting an IPhone game LLC.  
+
+2011 01
+Computer Science
+While working on our tower defense game, I started looking at Cocos and  
+
+2012 01
+BSSC
+I started skiing in the French Alps in 87. I was living in Algeria,  
+
+2012 08
+Modelling Our Cat With Blender
+This involved pencil life sketching, then refining the sketch on a 
+
+2012 09
+Driving
+I never needed to until now.
+ 
+2013 03
+Vinny Autonomous Robot
+This is probably one of my first projects involving  
+
+2013 09
+Blender Modeling From Photo
+Started experimenting with texturing and shaders.  
+
+2014 06
+Fps Networked Multiplayer Prototype
+I majored in comp sci with a minor in security, so  
+
+2015 01
+Applying Algorithms
+I took an Algorithm analysis class and was introduced 
+
+2015 05
+Wedding
+I used github.io to host our wedding webpages. I placed 
+
+2015 07
+Project RedDwarf
+RadioShack was going bankrupt I ended up buying a bunch 
+
+2016 04
+Kitty Cycle Published Android Game
+My first smart phone. Yeah, I’ve been the center of many 
+
+2016 03
+Letter Storm Unity Game
+Top-down action spelling game. I was the lead developer
+
+2016 07
+Mobile Gps Tracking Client Server
+I wanted to track my own location and travel path. 
+
+2016 09
+VR Tetrino Project
+There was a hackathon sponsored by a company named ‘leap motion’. 
+
+2016 05
+Alien Explorer Android Game
+No man sky was announced in 2013, and 3 years later we
+
+2016 08
+Making Blender Tutorials
+I always find the time to share my knowledge with my 
+
+2017 02
+Pi Rover Over The Web
+I was inspired by NASA’s curiosity project, and decided 
+
+2017 07
+TotalRespawn Co-founder And Lead Developer
+Co-founded TotalRespawn with Mark Belmarsh. At the time 
+
+2018 05
+TotalRespawn
+Integrated third party peripherals to the reality zombie game.
+
+2019 08
+Hardware Upgrade For Mobile Gaming
+I haven’t played FPS pc games for a while, and it does take lots of 
+
+2019 09
+Bellhop Mobile Game
+A friend of mine I brainstormed an idea to build a math game for kids. 
+
+2019 11
+Character modeling and animation from scratch
+Here some text plz
+
+2020 04
+Green screen madness
+Here some text plz
+ 
+2020 05
+FaceNapping
+Early 2020 When zoom started to become part of our life, I thought 
+
+2020 06
+Printing With PLA
+Here will be a collection of 3D printing tricks and tips that I have
+
+2020 08
+Counter Cyberthreat
+On a random Tuesday morning, I get a call from my parent’s LAN line. 
+
+2020 10
+Universal Servo Tester
+I needed a tool to test servos. It needs to be portable, have analogue
+
+2020 12
+Rodogo
+A quadruped robot using 12 servos and custom power distribution circuit,
+
+2021 01
+Upgrade and managed home network.
+Everyone’s working from home and very dependent on the network. Since 
+
+2021 02
+YouVeGotMail
+Another fun weekend project is the mail detector equipped with a 
+
+2021 06
+Home Automation From Scratch
+Network of wierless Raspberry pis with camera, and 4 remote switches. # mqtt app
+ 
+2022 01
+Pi Unity Game Console
+I wanted a way to put my Unity games on a console for my kids. Basically,
+
+2022 03
+Servo Panning Camera for Video Chat
+During a preliminary phone interview with the robotics company, 
+
+2022 04
+Neural net experiments
+I*ve been playing with OpenCV undo Unity and have felt hungry 
+
+2022 05
+Build This Digital Archive
+Host on Github as I did my wedding site. # Implement a way
+
+2022 05
+Flipper zero
+Got my flipper! First thing first, updating the firmware to 1.0.2 via update.flipperzero.one
+ 
+2022 05
+Rip Amienware
+Alienware dies Alien comes back to life. (update: checked the voltage output on the charger 

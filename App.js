@@ -1,6 +1,6 @@
-import fetch from "node-fetch";
+//import fetch from "node-fetch";
 //var data;
-//const fetch = require("node-fetch");
+const fetch = require("node-fetch");
 
 //http://api.icndb.com/jokes/random
 //https://api.chucknorris.io/jokes/random

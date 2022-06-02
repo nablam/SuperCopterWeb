@@ -3,8 +3,8 @@
 var CryptoJS = require("crypto-js");
 const fs = require("fs");
 
-const pathOutJasonish = "JASON.json";
-const pathlockedJASON = "lockedJASON.txt";
+const pathOutJasonish = "IOfiles/textfiles/JASONish.txt";
+const pathlockedJASON = "IOfiles/textfiles/lockedJASON2.txt";
 var JSONdata;
 var JSONdataStringed;
 
@@ -25,3 +25,4 @@ fs.writeFile(pathlockedJASON, encrypted, (err) => {
   }
   console.log("file written successfully");
 });
+console.log("file written successfully");

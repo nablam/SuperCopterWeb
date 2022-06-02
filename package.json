@@ -1,5 +1,5 @@
 {
-  "type": "module",
+
   "devDependencies": {
     "@types/node": "^17.0.35",
     "node-fetch": "^2.6.1"

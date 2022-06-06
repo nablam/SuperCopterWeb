@@ -5,7 +5,7 @@ var MyPlugin = {
     },
     HelloString: function(str)
     {
-        window.alert(Pointer_stringify(str));
+        window.alert(UTF8ToString(str));
     },
     PrintFloatArray: function(array, size)
     {
@@ -19,8 +19,9 @@ var MyPlugin = {
     StringReturnValueFunction: function()
     {
         var returnStr = "bla";
-        var buffer = _malloc(returnStr.length + 1);
-        writeStringToMemory(returnStr, buffer);
+        var bufferSize = lengthBytesUTF8(returnStr) + 1;
+        var buffer = _malloc(bufferSize); 
+        stringToUTF8(returnStr, buffer, bufferSize);
         return buffer;
     },
  

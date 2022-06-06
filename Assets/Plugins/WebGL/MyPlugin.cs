@@ -38,20 +38,19 @@ public class MyPlugin : MonoBehaviour
     void Start()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-         Hello();
+        // Hello();
 
-        HelloString("This is a string.");
+        //HelloString("This is a string.");
 
-        float[] myArray = new float[10];
-        PrintFloatArray(myArray, myArray.Length);
+        //float[] myArray = new float[10];
+        //PrintFloatArray(myArray, myArray.Length);
 
-        int result = AddNumbers(5, 7);
-        Debug.Log(result);
+        //int result = AddNumbers(5, 7);
+        //Debug.Log(result);
 
-        Debug.Log(StringReturnValueFunction());
+        //Debug.Log(StringReturnValueFunction());
 
-        //var texture = new Texture2D(0, 0, TextureFormat.ARGB32, false);
-        //BindWebGLTexture(texture.GetNativeTextureID());
+      
 #endif
 
     }

@@ -8,7 +8,9 @@ public class StartCanvasCTRL : MonoBehaviour
     public float originalTargetTime = 1.05f;
     private float _targettime;
     public TMP_Text m_text;
-  
+    public TMP_Text m_text_fromjs;
+    public TMP_Text DotNetThink;
+    public TMP_Text ChromeThink;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,40 +19,51 @@ public class StartCanvasCTRL : MonoBehaviour
 
     public void On_ButtonClicked() {
         Debug.Log("buttclik");
-        m_text.text = "was ckiked";
+        m_text.text = "unity button clicked";
+        TimerClicked = true;
+         
     }
 
     void timerEnded()
     {
-       
         onoff = !onoff;
         _targettime= originalTargetTime ;
     }
 
     int x;
     bool onoff;
-    void Update()
+    bool TimerClicked = false;
+    bool TimerIsRunning = false;
+    void RunTimer()
     {
         _targettime -= Time.deltaTime;
 
         if (_targettime <= 0.0f)
         {
-            timerEnded();
+            TimerClicked = false;
+            TimerIsRunning = false;
+            m_text.text = ".";
+            _targettime = originalTargetTime;
+        }
+       
+    }
+
+    public void Update_dotnet_thiks(string argstr) {
+        DotNetThink.text = argstr;
+    }
+    public void Update_Chrome_thiks(string argstr)
+    {
+        ChromeThink.text = argstr;
+    }
+    public void Update_test_thiks(string argstr)
+    {
+        m_text.text = argstr;
+    }
+    void Update()
+    {
+        if (TimerClicked && TimerIsRunning == false) {
+            RunTimer();
         }
 
-
-        if (onoff)
-        {
-
-        }
-        else
-
-        {
-            m_text.text = "_";
-        }
-
-
-
-        //= myatlas.GetSprite(spritename)
     }
 }

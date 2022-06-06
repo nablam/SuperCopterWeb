@@ -28,8 +28,8 @@ public class MyPlugin : MonoBehaviour
     [DllImport("__Internal")]
     private static extern string StringReturnValueFunction();
 
-    [DllImport("__Internal")]
-    private static extern void BindWebGLTexture(int texture);
+    //[DllImport("__Internal")]
+    //private static extern void BindWebGLTexture(int texture);
 	
 	 [DllImport("__Internal")]
      private static extern bool IsMobile();
@@ -50,12 +50,12 @@ public class MyPlugin : MonoBehaviour
 
         Debug.Log(StringReturnValueFunction());
 
-        var texture = new Texture2D(0, 0, TextureFormat.ARGB32, false);
-        BindWebGLTexture(texture.GetNativeTextureID());
+        //var texture = new Texture2D(0, 0, TextureFormat.ARGB32, false);
+        //BindWebGLTexture(texture.GetNativeTextureID());
 #endif
 
     }
-	     public bool isMobile()
+	     public bool checkMobile()
      {
          #if !UNITY_EDITOR && UNITY_WEBGL
              return IsMobile();

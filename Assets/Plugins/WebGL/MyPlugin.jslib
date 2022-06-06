@@ -23,13 +23,10 @@ var MyPlugin = {
         writeStringToMemory(returnStr, buffer);
         return buffer;
     },
-    BindWebGLTexture: function(texture)
-    {
-        GLctx.bindTexture(GLctx.TEXTURE_2D, GL.textures[texture]);
-    },
+ 
 	IsMobile: function()
      {
-         return UnityLoader.SystemInfo.mobile;
+         return Module.SystemInfo.mobile;
      }
 };
 

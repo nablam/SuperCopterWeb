@@ -14,7 +14,7 @@ public class StartSceneManager : MonoBehaviour
 
     void Start()
     {
-        if (plgin.isMobile()) {
+        if (plgin.checkMobile()) {
             Run_UpdateTestthink("is mobile");
         }
         else

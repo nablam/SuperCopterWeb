@@ -38,6 +38,7 @@ public class BKG_builderMoverController : MonoBehaviour
     public GameObject IamageBox_tileGO;
 
     List<GameObject> AllTileGOS ;
+    public List<GameObject> GEtAllTIleGOS() { return this.AllTileGOS; }
     public List<Vector3> AllTileWorldPos;
     public List<Vector3> AllTileRelPos;
     public List<Vector3> AllTileScacle;

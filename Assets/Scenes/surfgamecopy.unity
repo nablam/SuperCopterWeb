@@ -200,8 +200,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67865778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 230, y: -74, z: 8}
-  m_LocalScale: {x: 128, y: 20, z: 1}
+  m_LocalPosition: {x: 0, y: -70, z: 8}
+  m_LocalScale: {x: 50, y: 18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -360,7 +360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422876888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 70.1, z: 0}
+  m_LocalPosition: {x: 49.9, y: 70.1, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -520,8 +520,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463537866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -226, y: -80, z: 1}
-  m_LocalScale: {x: 64, y: 20, z: 1}
+  m_LocalPosition: {x: 0, y: -80, z: 1}
+  m_LocalScale: {x: 126, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1052,9 +1052,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920734615}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57, y: -7, z: 0.5}
-  m_LocalScale: {x: 30, y: 18, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -22, y: -1, z: 0.5}
+  m_LocalScale: {x: 45.668, y: 21.406, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1154,9 +1154,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1019639615}
   - component: {fileID: 1019639614}
-  - component: {fileID: 1019639617}
-  - component: {fileID: 1019639616}
-  - component: {fileID: 1019639618}
   m_Layer: 0
   m_Name: GameOfSurfManager
   m_TagString: Untagged
@@ -1176,6 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ea9e185af9dfe4e8b73101d710f8a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GOmanager: {fileID: 1904621808}
 --- !u!4 &1019639615
 Transform:
   m_ObjectHideFlags: 0
@@ -1191,64 +1189,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1019639616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019639613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4743df2a97184f34581a748f8cd5a4db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1019639617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019639613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 808e288cde98d474189720990c45b4cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Sky_tileGO: {fileID: 1357453862}
-  Surfer_tileGO: {fileID: 1957670263}
-  Board_tileGO: {fileID: 1534260439}
-  BigWave_tileGO: {fileID: 1868947243}
-  BigFoam_tileGO: {fileID: 669900592}
-  SmallFoam_tileGO: {fileID: 920734615}
-  BackWave_tileGO: {fileID: 67865778}
-  FrontWave_tileGO: {fileID: 463537866}
-  Sun_tileGO: {fileID: 619081751}
-  Cloud1_tileGO: {fileID: 1153794154}
-  Cloude2_tileGO: {fileID: 422876888}
-  Seagull1_tileGO: {fileID: 2076411450}
-  Seagull2_tileGO: {fileID: 1809240221}
-  ScoreBox_tileGO: {fileID: 471301540}
-  InfoBox_tileGO: {fileID: 1799009389}
-  IamageBox_tileGO: {fileID: 439436931}
-  AllTileWorldPos: []
-  AllTileRelPos: []
-  AllTileScacle: []
-  PivotOBJ: {fileID: 1356333880}
-  PivotEnd: {fileID: 680155028}
---- !u!114 &1019639618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019639613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b8d94a4e3272eb41be3641741da4972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxIntensity: 0.7
 --- !u!1 &1153794154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,7 +1266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153794154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59, y: 59.6, z: 0}
+  m_LocalPosition: {x: 106.1, y: 59.6, z: 0}
   m_LocalScale: {x: 20, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1350,7 +1290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6934065616114035442, guid: bab877f0ee90a294b8f036ce3d4a6b1b, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6934065616114035442, guid: bab877f0ee90a294b8f036ce3d4a6b1b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1443,7 +1383,7 @@ GameObject:
   - component: {fileID: 1337397301}
   - component: {fileID: 1337397300}
   m_Layer: 5
-  m_Name: CanvasSurf
+  m_Name: CanvasSurfold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1557,7 +1497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356333880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.9, y: -77, z: 1}
+  m_LocalPosition: {x: -42.9, y: -77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1775,7 +1715,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1799009389
 GameObject:
@@ -2080,6 +2020,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1904621805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1904621807}
+  - component: {fileID: 1904621808}
+  m_Layer: 0
+  m_Name: BKG_builder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1904621807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904621805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1904621808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904621805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808e288cde98d474189720990c45b4cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sky_tileGO: {fileID: 1357453862}
+  Surfer_tileGO: {fileID: 1957670263}
+  Board_tileGO: {fileID: 1534260439}
+  BigWave_tileGO: {fileID: 1868947243}
+  BigFoam_tileGO: {fileID: 669900592}
+  SmallFoam_tileGO: {fileID: 920734615}
+  BackWave_tileGO: {fileID: 67865778}
+  FrontWave_tileGO: {fileID: 463537866}
+  Sun_tileGO: {fileID: 619081751}
+  Cloud1_tileGO: {fileID: 1153794154}
+  Cloude2_tileGO: {fileID: 422876888}
+  Seagull1_tileGO: {fileID: 2076411450}
+  Seagull2_tileGO: {fileID: 1809240221}
+  ScoreBox_tileGO: {fileID: 471301540}
+  InfoBox_tileGO: {fileID: 1799009389}
+  IamageBox_tileGO: {fileID: 439436931}
+  AllTileWorldPos: []
+  AllTileRelPos: []
+  AllTileScacle: []
 --- !u!1 &1957670263
 GameObject:
   m_ObjectHideFlags: 0

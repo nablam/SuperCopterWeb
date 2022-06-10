@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class SurfGameManager : MonoBehaviour
 {
-    public BKG_builderMoverController GOmanager;
-    TMP_Text m_text_fromjs;
+      BKG_builderMoverController GOmanager;
+    WavesMover _wavesmover;
+    SurferController _surferController;
+    
 
     public void DoTestMesage(string argstr) {
         clickcount++;
@@ -24,9 +26,19 @@ public class SurfGameManager : MonoBehaviour
         MasterOBJ.On_EVENT_WriteToTXT -= DoTestMesage;
 
     }
+
+    private void Awake()
+    {
+        _wavesmover = GetComponent<WavesMover>();
+        GOmanager = GetComponent<BKG_builderMoverController>();
+        _surferController = GetComponent<SurferController>();
+    }
     void Start()
     {
-      //  DoTestMesage("helloteststts");
+        StartCanvasCTRL.Instance.Set_Mode(UI_MODE.SurfMode);
+        StartCanvasCTRL.Instance.Show_HomeButtone(true);
+        _wavesmover.InitWaveMover(GOmanager.FrontWave_tileGO, GOmanager.BackWave_tileGO );
+        _surferController.InitSurferController(GOmanager.Surfer_tileGO, GOmanager.Board_tileGO, GOmanager.PivotOBJ, GOmanager.PivotEnd);
     }
 
     int clickcount=0;

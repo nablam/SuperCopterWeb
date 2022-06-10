@@ -43,6 +43,8 @@ public class BKG_builderMoverController : MonoBehaviour
     public List<Vector3> AllTileRelPos;
     public List<Vector3> AllTileScacle;
 
+    public GameObject PivotOBJ;
+    public GameObject PivotEnd;
     //*********************************************************
 
     Vector3 Sky_tileGO_worldPos = new Vector3(0f, 0f, 14f);

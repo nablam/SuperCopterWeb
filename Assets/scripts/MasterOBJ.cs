@@ -43,4 +43,12 @@ public class MasterOBJ : MonoBehaviour
     public void RunUpdateTestText(string astringFromJs) {
         CALL_EVENT_WriteToTXT(astringFromJs);
     }
+
+
+    public delegate void EVENT_BtnPressedSTR(string argstr);
+    public static event EVENT_BtnPressedSTR On_EVENT_BtnPressedSTR;
+    public static void CALL_EVENT_BtnPressedSTR(string argstr)
+    {
+        if (On_EVENT_BtnPressedSTR != null) On_EVENT_BtnPressedSTR(argstr);
+    }
 }

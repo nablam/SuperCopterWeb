@@ -138,40 +138,40 @@ public class StartCanvasCTRL : MonoBehaviour
         {
 
             case "nav_startreset":
-                Debug.Log(argstr + " 0");
+                // Debug.Log(argstr + " 0");
                 break;
 
             case "nav_home":
-                Debug.Log(argstr + " 1");
+                // Debug.Log(argstr + " 1");
                 break;
             case "nav_back":
-                Debug.Log(argstr + " 2");
+                // Debug.Log(argstr + " 2");
                 break;
             case "nav_next":
-                Debug.Log(argstr + " 3");
+                // Debug.Log(argstr + " 3");
                 break;
             case "dpad_up":
-                Debug.Log(argstr + " 4 up");
+                // Debug.Log(argstr + " 4 up");
                 break;
             case "dpad_down":
-                Debug.Log(argstr + " 5 down");
+                // Debug.Log(argstr + " 5 down");
                 break;
             case "dpad_left":
-                Debug.Log(argstr + " 6 left");
+                // Debug.Log(argstr + " 6 left");
                 break;
 
             case "dpad_right":
-                Debug.Log(argstr + " 7 right");
+                // Debug.Log(argstr + " 7 right");
                 break;
 
             case "dpad_actionA":
-                Debug.Log(argstr + " 8 act A");
+                // Debug.Log(argstr + " 8 act A");
                 break;
             case "dpad_actionB":
-                Debug.Log(argstr + " 9 act B");
+                // Debug.Log(argstr + " 9 act B");
                 break;
             default:
-                Debug.Log("defauklt "+ argstr);
+                // Debug.Log("defauklt "+ argstr);
                 break;
         }
       
@@ -225,5 +225,11 @@ public class StartCanvasCTRL : MonoBehaviour
         Set_Mode(_curMode);
         Show_HomeButtone(true);
     }
- 
+
+    public void On_down_debug() { }
+    public void On_up_debug() { }
+    public void On_enter_debug() { }
+    public void On_exit_debug() { }
+
+
 }

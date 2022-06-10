@@ -39,6 +39,60 @@ public class SurferController : MonoBehaviour
     bool onoff;
 
     bool SurferIsSurfing;
+
+    private void OnEnable()
+    {
+        MasterOBJ.On_EVENT_BtnPressedSTR += SceneNaveButton;
+    }
+    private void OnDisable()
+    {
+        MasterOBJ.On_EVENT_BtnPressedSTR -= SceneNaveButton;
+    }
+    bool Rbutton_d = false;
+    bool Rbutton_u = false;
+    bool Lbutton_d = false;
+    bool Lbutton_u = false;
+
+    void SceneNaveButton(string argstr)
+    {
+        Debug.Log(argstr);
+
+        switch (argstr)
+        {
+ 
+            case "brd":
+
+                 Debug.Log("Rbutton_d is DOWN");
+                Rbutton_d = true;
+                Rbutton_u = false;
+                break;
+            case "bru":
+                Debug.Log("Rbutton_d is UP");
+                Rbutton_d = false;
+                Rbutton_u = true;
+                     
+                break;
+
+         
+
+    
+            case "bld":
+                  Debug.Log("leftb_d is down");
+                Lbutton_d = true;
+                Lbutton_u = false;
+                break;
+
+            case "blu":
+                Debug.Log("leftb_d is up");
+                Lbutton_d = false;
+                Lbutton_u = true;
+                break;
+            default:
+                 
+                break;
+        }
+
+    }
     void RunTimer()
     {
         _targettime -= Time.deltaTime;
@@ -76,18 +130,18 @@ public class SurferController : MonoBehaviour
         RandomeIndensity = Random.Range(0f, MaxIntensity);
         SurferIsSurfing = true;
         original_SurferRelPos = new Vector3(surfer.transform.localPosition.x, surfer.transform.localPosition.y, surfer.transform.localPosition.z);
-        Debug.Log("original_SurferRelPos " + original_SurferRelPos);
+        //Debug.Log("original_SurferRelPos " + original_SurferRelPos);
         original_SurferWORLDPos = new Vector3(surfer.transform.position.x, surfer.transform.position.y, surfer.transform.position.z);
-        Debug.Log("original_SurferWORLDPos " + original_SurferWORLDPos);
+      //  Debug.Log("original_SurferWORLDPos " + original_SurferWORLDPos);
         origina_BoardRelPos = new Vector3(board.transform.localPosition.x, board.transform.localPosition.y, board.transform.localPosition.z);
-        Debug.Log("origina_BoardRelPos " + origina_BoardRelPos);
+      //  Debug.Log("origina_BoardRelPos " + origina_BoardRelPos);
         origina_BoardWORLSPos = new Vector3(board.transform.position.x, board.transform.position.y, board.transform.position.z);
-        Debug.Log("origina_BoardWORLSPos " + origina_BoardWORLSPos);
+      //  Debug.Log("origina_BoardWORLSPos " + origina_BoardWORLSPos);
 
         original_Pivot_relPs = new Vector3(pivot.transform.localPosition.x, pivot.transform.localPosition.y, pivot.transform.localPosition.z);
-        Debug.Log("original_Pivot_relPs " + original_Pivot_relPs);
+      //  Debug.Log("original_Pivot_relPs " + original_Pivot_relPs);
         origin_Pivot_WORLDPs = new Vector3(pivot.transform.position.x, pivot.transform.position.y, pivot.transform.position.z);
-        Debug.Log("origin_Pivot_WORLDPs " + origin_Pivot_WORLDPs);
+      //  Debug.Log("origin_Pivot_WORLDPs " + origin_Pivot_WORLDPs);
 
 
         //PivotOBJ.transform.position = new Vector3(-43, -77,1f);
@@ -99,20 +153,54 @@ public class SurferController : MonoBehaviour
     
     }
 
+    float _H_ = 0.0f;
     void RunPivotControleWithRandomWinds()
     {
         RunTimer();
 
-        float h = Input.GetAxisRaw("Horizontal");
+         
+        if (Rbutton_d) _H_ = 1f;
+        else
+               if (Lbutton_d) _H_ = -1f;
+        else
+            _H_ = 0f;
 
-        pivot.transform.Rotate(0, 0, RandomeIndensity - h, Space.Self);
+        pivot.transform.Rotate(0, 0, RandomeIndensity - _H_, Space.Self);
+
     }
 
+    void Updatefingers()
+    {
+        var fingerCount = 0;
+        foreach (Touch touch in Input.touches)
+        {
+            if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
+            {
 
+                fingerCount++;
+                Debug.Log(touch.position);
+            }
+        }
+        if (fingerCount > 0)
+        {
+            Debug.Log("User has " + fingerCount + " finger(s) touching the screen");
+           
+        }
+
+
+    }
     void Update()
     {
 
+     
+
+       
+        
+
+
+
         RunPivotControleWithRandomWinds();
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SurferIsSurfing = false;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartCanvasCTRL : MonoBehaviour
 {
@@ -143,6 +144,8 @@ public class StartCanvasCTRL : MonoBehaviour
 
             case "nav_home":
                 // Debug.Log(argstr + " 1");
+
+                SceneManager.LoadScene("StartScene");
                 break;
             case "nav_back":
                 // Debug.Log(argstr + " 2");

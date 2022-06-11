@@ -157,13 +157,15 @@ public class SurferController : MonoBehaviour
     void RunPivotControleWithRandomWinds()
     {
         RunTimer();
+     
 
-         
         if (Rbutton_d) _H_ = 1f;
         else
                if (Lbutton_d) _H_ = -1f;
         else
             _H_ = 0f;
+
+        _H_ = Input.GetAxisRaw("Horizontal");
 
         pivot.transform.Rotate(0, 0, RandomeIndensity - _H_, Space.Self);
 
@@ -192,16 +194,18 @@ public class SurferController : MonoBehaviour
     void Update()
     {
 
-     
 
-       
-        
+   
+
+
 
 
 
         RunPivotControleWithRandomWinds();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (pivot.transform.rotation.z > 40 || pivot.transform.rotation.z < -40  )  
+
+         
         {
             SurferIsSurfing = false;
             surfer.transform.parent = null;

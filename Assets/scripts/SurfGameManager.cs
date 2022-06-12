@@ -8,7 +8,7 @@ public class SurfGameManager : MonoBehaviour
       BKG_builderMoverController GOmanager;
     WavesMover _wavesmover;
     SurferController _surferController;
-    
+    bool reset;
 
     public void DoTestMesage(string argstr) {
         clickcount++;
@@ -44,6 +44,7 @@ public class SurfGameManager : MonoBehaviour
 
     public void Ah_anim_waveIsInPlace() {
         Debug.Log("Ah_anim_waveIsInPlace");
+        _surferController.StartGameWindAndcontrolls();
     }
 
     int clickcount=0;

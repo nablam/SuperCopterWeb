@@ -28,8 +28,9 @@ public class SurferController : MonoBehaviour
     Vector3 Hard_Board_relPs;
     float speed = 1.2f;
 
-
+    bool GameisRunning;
     public float MaxIntensity = 0.7f;
+    float _cachedMaxIntensity;
     public bool UseWind;
     private float _targettime;
     private float ChangeDirectionTimer = 3.0f;
@@ -39,7 +40,7 @@ public class SurferController : MonoBehaviour
     bool onoff;
 
     bool SurferIsSurfing;
-
+    Animator _wavanimator;
     private void OnEnable()
     {
         MasterOBJ.On_EVENT_BtnPressedSTR += SceneNaveButton;
@@ -112,7 +113,14 @@ public class SurferController : MonoBehaviour
             {
                 direction = -1;
             }
-            RandomeIndensity = Random.Range(0f, MaxIntensity) * direction;
+            if (!GameisRunning)
+            {
+                _cachedMaxIntensity = 0f;
+            }
+            else {
+                _cachedMaxIntensity = MaxIntensity;
+            }
+            RandomeIndensity = Random.Range(0f, _cachedMaxIntensity) * direction;
 
         }
 
@@ -121,11 +129,12 @@ public class SurferController : MonoBehaviour
 
     public void InitSurferController(GameObject argSurfer, GameObject argBoard, GameObject argPivot, GameObject argPivotend, GameObject argBaseObj, GameObject argWaveObj)
     {
+        _cachedMaxIntensity = MaxIntensity;
         surfer = argSurfer;
         board = argBoard;
         pivot = argPivot;
         PivotEnd = argPivotend;
-
+        _wavanimator = argBaseObj.GetComponent<Animator>();
 
         RandomeIndensity = Random.Range(0f, MaxIntensity);
         SurferIsSurfing = true;
@@ -147,6 +156,7 @@ public class SurferController : MonoBehaviour
         //PivotOBJ.transform.position = new Vector3(-43, -77,1f);
         surfer.transform.parent = PivotEnd.transform;
         board.transform.parent = PivotEnd.transform;
+        GameisRunning = false;
     }
     void Awake()
     {
@@ -171,11 +181,29 @@ public class SurferController : MonoBehaviour
         if (_K_ > 0.0f || _K_ < 0.0f)
             _H_ = _K_;
 
+        if (!GameisRunning)
+        {
+
+            _H_ = 0f;
+        }
+
         pivot.transform.Rotate(0, 0, RandomeIndensity - _H_, Space.Self);
 
     }
+    IEnumerator WaitAndRestart( )
+    {
+        yield return new WaitForSeconds(2f);
+        ResetPlayer();
+    }
 
+    IEnumerator WaitAndReset()
+    {
+        yield return new WaitForSeconds(2f);
+        _wavanimator.SetBool("resetbool", false);
+    }
     void ResetPlayer() {
+
+        _wavanimator.SetBool("resetbool", true);
         SurferIsSurfing = true;
         surfer.transform.eulerAngles = new Vector3(0, 0, 0);
         board.transform.eulerAngles = new Vector3(0, 0, 0);
@@ -188,8 +216,8 @@ public class SurferController : MonoBehaviour
 
         surfer.transform.parent = PivotEnd.transform;
         board.transform.parent = PivotEnd.transform;
+        StartCoroutine("WaitAndReset");
 
-      
     }
 
     void Updatefingers()
@@ -211,6 +239,11 @@ public class SurferController : MonoBehaviour
         }
 
 
+    }
+
+    public void StartGameWindAndcontrolls() {
+
+        GameisRunning = true;
     }
     public float maxAngle=50;
     void Update()
@@ -241,14 +274,12 @@ public class SurferController : MonoBehaviour
             board.transform.Translate(1, -2f, 0, Space.World);
             if (surfer.transform.position.y < LowestOutOfScreen)
             {
-                Debug.Log("restart");
+                GameisRunning = false;
+                StartCoroutine("WaitAndRestart");
             }
         }
 
-        if (SurferIsSurfing == false) {
-            if (Input.GetKeyDown(KeyCode.Space))
-                ResetPlayer();
-        }
+         
 
     }
 

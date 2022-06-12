@@ -30,7 +30,7 @@ public class SurferController : MonoBehaviour
 
 
     public float MaxIntensity = 0.7f;
-
+    public bool UseWind;
     private float _targettime;
     private float ChangeDirectionTimer = 3.0f;
     private float RandomeIndensity = 0f;
@@ -119,7 +119,7 @@ public class SurferController : MonoBehaviour
     }
 
 
-    public void InitSurferController(GameObject argSurfer, GameObject argBoard, GameObject argPivot, GameObject argPivotend)
+    public void InitSurferController(GameObject argSurfer, GameObject argBoard, GameObject argPivot, GameObject argPivotend, GameObject argBaseObj, GameObject argWaveObj)
     {
         surfer = argSurfer;
         board = argBoard;
@@ -175,6 +175,23 @@ public class SurferController : MonoBehaviour
 
     }
 
+    void ResetPlayer() {
+        SurferIsSurfing = true;
+        surfer.transform.eulerAngles = new Vector3(0, 0, 0);
+        board.transform.eulerAngles = new Vector3(0, 0, 0);
+
+        pivot.transform.eulerAngles=  new Vector3(0, 0, 0);
+
+
+        surfer.transform.position = new Vector3(PivotEnd.transform.position.x, PivotEnd.transform.position.y +30 , 0);
+        board.transform.position = new Vector3(PivotEnd.transform.position.x, PivotEnd.transform.position.y + 30, 0);
+
+        surfer.transform.parent = PivotEnd.transform;
+        board.transform.parent = PivotEnd.transform;
+
+      
+    }
+
     void Updatefingers()
     {
         var fingerCount = 0;
@@ -195,34 +212,42 @@ public class SurferController : MonoBehaviour
 
 
     }
+    public float maxAngle=50;
     void Update()
     {
 
 
-   
 
+        
 
 
 
 
         RunPivotControleWithRandomWinds();
 
-        if (pivot.transform.rotation.z > 40 || pivot.transform.rotation.z < -40  )  
-
-         
+        if (!(pivot.transform.eulerAngles.z < maxAngle || pivot.transform.eulerAngles.z > 360- maxAngle)   )  
         {
             SurferIsSurfing = false;
             surfer.transform.parent = null;
+            board.transform.parent = null;
 
         }
         if (SurferIsSurfing == false)
         {
             surfer.transform.Rotate(0, 0, 3f, Space.World);
             surfer.transform.Translate(0, -2f, 0, Space.World);
+
+            board.transform.Rotate(0, 0, 3f, Space.World);
+            board.transform.Translate(1, -2f, 0, Space.World);
             if (surfer.transform.position.y < LowestOutOfScreen)
             {
                 Debug.Log("restart");
             }
+        }
+
+        if (SurferIsSurfing == false) {
+            if (Input.GetKeyDown(KeyCode.Space))
+                ResetPlayer();
         }
 
     }

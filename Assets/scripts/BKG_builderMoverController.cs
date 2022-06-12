@@ -36,8 +36,9 @@ public class BKG_builderMoverController : MonoBehaviour
     public GameObject InfoBox_tileGO;
 
     public GameObject IamageBox_tileGO;
+    
 
-    List<GameObject> AllTileGOS ;
+   List<GameObject> AllTileGOS ;
     public List<GameObject> GEtAllTIleGOS() { return this.AllTileGOS; }
     public List<Vector3> AllTileWorldPos;
     public List<Vector3> AllTileRelPos;
@@ -45,6 +46,7 @@ public class BKG_builderMoverController : MonoBehaviour
 
     public GameObject PivotOBJ;
     public GameObject PivotEnd;
+    public GameObject MainWaveRoot;
     //*********************************************************
 
     Vector3 Sky_tileGO_worldPos = new Vector3(0f, 0f, 14f);

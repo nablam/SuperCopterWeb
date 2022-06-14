@@ -27,6 +27,10 @@ public class MasterOBJ : MonoBehaviour
 		return false;
 	}
 
+	static string _secret = "na2";
+	public void SetSecret(string argSecret) { _secret = argSecret; }
+	public static string GetSecret() { return _secret; }
+
 	private void Awake()
 	{
 		if (Instance == null)
@@ -55,5 +59,12 @@ public class MasterOBJ : MonoBehaviour
 	public static void CALL_EVENT_BtnPressedSTR(string argstr)
 	{
 		if (On_EVENT_BtnPressedSTR != null) On_EVENT_BtnPressedSTR(argstr);
+	}
+
+	public delegate void EVENT_PlayerScoreUpdate(int argint);
+	public static event EVENT_PlayerScoreUpdate On_PlayerScoreUpdate;
+	public static void CALL_EVENT_PlayerScoreUpdateINT(int argint)
+	{
+		if (On_PlayerScoreUpdate != null) On_PlayerScoreUpdate(argint);
 	}
 }

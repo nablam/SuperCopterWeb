@@ -227,6 +227,10 @@ public class StartCanvasCTRL : MonoBehaviour
         _curMode = UI_MODE.Navigation;
         Set_Mode(_curMode);
         Show_HomeButtone(true);
+        // Display_centerMid(MasterOBJ.GetSecret());
+        if (MasterOBJ.GetSecret()=="pigameconsole_youvegotmail_charactercreation_") {
+            Display_centerMid("BONUS");
+        }
     }
 
     public void On_down_debug() { }

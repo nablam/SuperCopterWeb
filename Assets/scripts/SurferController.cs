@@ -9,7 +9,7 @@ public class SurferController : MonoBehaviour
       GameObject pivot;
       GameObject PivotEnd;
 
-
+    SurfGameManager _gm;
    
     Vector3 Hard_Pivot_relPs;
     Vector3 Hard_Pivot_WORLDPs;
@@ -28,7 +28,7 @@ public class SurferController : MonoBehaviour
     Vector3 Hard_Board_relPs;
     float speed = 1.2f;
 
-    bool GameisRunning;
+    //bool _gm.GameisRunning;
     public float MaxIntensity = 0.7f;
     float _cachedMaxIntensity;
     public bool UseWind;
@@ -113,7 +113,7 @@ public class SurferController : MonoBehaviour
             {
                 direction = -1;
             }
-            if (!GameisRunning)
+            if (!_gm.GameisRunning)
             {
                 _cachedMaxIntensity = 0f;
             }
@@ -156,11 +156,11 @@ public class SurferController : MonoBehaviour
         //PivotOBJ.transform.position = new Vector3(-43, -77,1f);
         surfer.transform.parent = PivotEnd.transform;
         board.transform.parent = PivotEnd.transform;
-        GameisRunning = false;
+        _gm.GameisRunning = false;
     }
     void Awake()
     {
-    
+        _gm = GetComponent<SurfGameManager>();
     }
 
     float _H_ = 0.0f;
@@ -181,7 +181,7 @@ public class SurferController : MonoBehaviour
         if (_K_ > 0.0f || _K_ < 0.0f)
             _H_ = _K_;
 
-        if (!GameisRunning)
+        if (!_gm.GameisRunning)
         {
 
             _H_ = 0f;
@@ -243,10 +243,10 @@ public class SurferController : MonoBehaviour
 
     public void StartGameWindAndcontrolls() {
 
-        GameisRunning = true;
+        _gm.GameisRunning = true;
     }
     public float maxAngle=50;
-    void Update()
+    public void Run_Update()
     {
 
 
@@ -274,7 +274,7 @@ public class SurferController : MonoBehaviour
             board.transform.Translate(1, -2f, 0, Space.World);
             if (surfer.transform.position.y < LowestOutOfScreen)
             {
-                GameisRunning = false;
+                _gm.GameisRunning = false;
                 StartCoroutine("WaitAndRestart");
             }
         }
